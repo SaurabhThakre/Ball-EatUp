@@ -607,12 +607,12 @@ function playerVsenemy(obj1, obj2) {
       obj1.diameter / 2 + obj2.diameter / 2
     ) {
       if (obj1.diameter <= obj2.diameter) {
-        // gameover.play();
+        gameover.play();
         obj2.diameter = obj2.diameter + 8;
         obj1.diameter = 0;
         playerdied = 1;
       } else {
-        // win.play();
+        win.play();
         obj1.diameter = obj1.diameter + obj2.diameter / 8;
         obj2.diameter = 0;
       }
@@ -666,7 +666,7 @@ function eatFood(obj, x) {
         if (foodx.length == 0) {
           foodx.push(i);
           foody.push(j);
-          // eat.play();
+          eat.play();
           if (x == 0) obj.diameter = obj.diameter + 4;
           else obj.diameter = obj.diameter + 1.0;
 
@@ -683,7 +683,7 @@ function eatFood(obj, x) {
           if (flag_food == 0) {
             foodx.push(i);
             foody.push(j);
-            // eat.play();
+            eat.play();
             if (x == 0) obj.diameter = obj.diameter + 4;
             else obj.diameter = obj.diameter + 1.0;
 
